@@ -103,7 +103,7 @@ export default function Evaluator({ firstOperand }) {
           <InputText inputHandler={(val) => setSecondOperand(Number(val))} />
         </Grid>
         <CustomButton onClickHandler={() => evaluate()}>
-          Add operand
+          Add operation
         </CustomButton>
       </Grid>
     </Grid>
@@ -161,13 +161,10 @@ const useStyles = makeStyles((theme) => ({
   bottomFieldsContainer: {
     marginTop: "10vh",
     width: "90%",
-    // backgroundColor: "green",
     padding: 10,
   },
   rightAlign: {
     margin: "1%",
-    // width: "90%",
-    // backgroundColor: "red",
   },
   centerAlign: {
     textAlign: "center",
@@ -181,6 +178,8 @@ const BootstrapInput = withStyles((theme) => ({
     border: "2px solid #A8F1E1",
     borderRadius: 5,
     maxWidth: "300px",
+    padding: "5px",
+    fontSize: "20px",
     fontFamily: [
       "-apple-system",
       "BlinkMacSystemFont",
