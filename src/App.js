@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Evaluator from "./components/evaluator";
-import FirstOperand from "./components/firstOperand";
+import Evaluator from "./screens/Evaluator";
+import FirstOperand from "./screens/FirstOperand";
 
 function App() {
   const [firstOperand, setFirstOperand] = useState(0);
@@ -9,7 +9,10 @@ function App() {
     <div className="App">
       {showEvaluator && <Evaluator firstOperand={firstOperand} />}
 
-      <FirstOperand getFirstOperand={setFirstOperand} showEvaluator={(val)=>setShowEvaluator(val)}/>
+      <FirstOperand
+        getFirstOperand={setFirstOperand}
+        showEvaluator={(val) => setShowEvaluator(val)}
+      />
     </div>
   );
 }

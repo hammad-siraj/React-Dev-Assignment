@@ -9,7 +9,7 @@ import {
   InputBase,
 } from "@material-ui/core";
 import InputText from "../components/InputText";
-import CustomButton from "./CustomButton";
+import CustomButton from "../components/CustomButton";
 
 export default function Evaluator({ firstOperand }) {
   const [localFirstOperand, setLocalFirstOperand] = useState("");

@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from "react";
 import { Box, Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import InputText from "./InputText";
-import CustomButton from "./CustomButton";
+import InputText from "../components/InputText";
+import CustomButton from "../components/CustomButton";
 
 export default function FirstOperand({ getFirstOperand, showEvaluator }) {
   const [firstOperand, setFirstOperand] = useState(0);
