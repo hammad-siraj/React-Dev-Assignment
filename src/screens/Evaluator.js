@@ -56,20 +56,20 @@ export default function Evaluator({ firstOperand }) {
       className={classes.container}
     >
       <Box className={classes.valuesContainer}>
-        <Box item xs={6} md={6} className={classes.valueBox}>
+        <Box xs={6} md={6} className={classes.valueBox}>
           <h3>{localFirstOperand}</h3>
         </Box>
-        <Box item xs={6} md={6} className={classes.valueBox}>
+        <Box xs={6} md={6} className={classes.valueBox}>
           <h3>{secondOperand}</h3>
         </Box>
-        <Box item xs={6} md={6} className={classes.valueBox}>
+        <Box xs={6} md={6} className={classes.valueBox}>
           <h3>{operator}</h3>
         </Box>
       </Box>
-      <Box item className={classes.equalBox}>
+      <Box className={classes.equalBox}>
         <h2>=</h2>
       </Box>
-      <Box item className={classes.result}>
+      <Box className={classes.result}>
         <h2>{result}</h2>
       </Box>
 
@@ -84,7 +84,6 @@ export default function Evaluator({ firstOperand }) {
           wrap="nowrap"
           justify="center"
           alignItems="center"
-          className={classes.rightAlign}
         >
           <FormControl className={classes.formControl}>
             <Select
@@ -100,7 +99,10 @@ export default function Evaluator({ firstOperand }) {
             </Select>
           </FormControl>
 
-          <InputText inputHandler={(val) => setSecondOperand(Number(val))} />
+          <InputText
+            value={secondOperand}
+            inputHandler={(val) => setSecondOperand(Number(val))}
+          />
         </Grid>
         <CustomButton onClickHandler={() => evaluate()}>
           Add operation
@@ -120,8 +122,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
   },
   formControl: {
-    width: "50vh",
+    width: "300px",
     height: "55px",
+    padding: "10px",
     marginRight: "2px",
   },
 
@@ -159,27 +162,20 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "400%",
   },
   bottomFieldsContainer: {
-    marginTop: "10vh",
     width: "90%",
     padding: 10,
-  },
-  rightAlign: {
-    margin: "1%",
-  },
-  centerAlign: {
-    textAlign: "center",
+    marginBottom: "10vh",
   },
 }));
 
 const BootstrapInput = withStyles((theme) => ({
   input: {
     borderRadius: 4,
-    height: "40px",
     border: "2px solid #A8F1E1",
     borderRadius: 5,
-    maxWidth: "300px",
-    padding: "5px",
-    fontSize: "20px",
+    height: "38px",
+
+    fontSize: "30px",
     fontFamily: [
       "-apple-system",
       "BlinkMacSystemFont",

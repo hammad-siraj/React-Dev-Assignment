@@ -29,6 +29,7 @@ export default function FirstOperand({ getFirstOperand, showEvaluator }) {
       >
         <Box component="div" className={classes.textFieldContainer}>
           <InputText
+            value={firstOperand}
             inputHandler={(val) => setFirstOperand(val)}
             blurHandler={(val) => getFirstOperand(val)}
           />
