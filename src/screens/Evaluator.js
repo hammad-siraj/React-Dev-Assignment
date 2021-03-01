@@ -57,7 +57,7 @@ export default function Evaluator({ firstOperand }) {
     >
       <Box className={classes.valuesContainer}>
         <Box item xs={6} md={6} className={classes.valueBox}>
-          <h3>{firstOperand}</h3>
+          <h3>{localFirstOperand}</h3>
         </Box>
         <Box item xs={6} md={6} className={classes.valueBox}>
           <h3>{secondOperand}</h3>
